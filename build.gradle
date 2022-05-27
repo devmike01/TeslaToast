@@ -5,6 +5,30 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.6.20' apply false
 }
 
+allprojects {
+    beforeEvaluate {
+        pluginManager.withPlugin("maven-publish") {
+            extensions.getByType<PublishingExtension>('release').publications {
+                release(MavenPublication) {
+                    groupId = 'com.saybits'
+                    artifactId = 'teslatoast'
+                    version = '0.0.1-beta'
+
+                    afterEvaluate {
+                        from components.release
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+//allprojects {
+//
+//}
+

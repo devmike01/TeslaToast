@@ -1,10 +1,20 @@
+
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
+
 android {
+
+    namespace = "com.saybits.teslatoast"
+
     compileSdk 32
+
+    testFixtures {
+        enable = true
+    }
+
 
     defaultConfig {
         minSdk 21
@@ -27,7 +37,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+
 }
+
 
 dependencies {
 

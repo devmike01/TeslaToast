@@ -12,7 +12,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import devmike01.teslatoast.R
+import com.saybits.teslatoast.R
 
 
 /**
