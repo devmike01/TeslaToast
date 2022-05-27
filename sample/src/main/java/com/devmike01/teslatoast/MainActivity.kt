@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
            // TeslaToastViewImpl().show(supportFragmentManager, "")
             TeslaToast.show(this, R.string.test_string, 0,
-                trailingIcon = R.drawable.ic_launcher_background,  TeslaToast.LENGTH_SHORT)
+                trailingIcon = R.drawable.ic_baseline_adb_24,  TeslaToast.LENGTH_SHORT)
 
         }
     }
